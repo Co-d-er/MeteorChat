@@ -1,13 +1,13 @@
 if (Cities.find().count() === 0) {
-  Posts.insert({
+  Cities.insert({
     city: 'Lviv'
   });
 
-  Posts.insert({
+  Cities.insert({
     city: 'Kyiv'
   });
 
-  Posts.insert({
+  Cities.insert({
     city: 'Odessa'
   });
 }
