@@ -1,0 +1,22 @@
+<template name="chat">
+  <form name="comment" class="comment-form">
+    <div class="control-group">
+        <div class="controls">
+            <h4>
+    Current user:&nbsp;<a href="{{pathFor 'profile'}}">{{curruser}}</a>&nbsp;&#124;&nbsp;
+    <a href="{{pathFor 'startPage'}}" class="logout">Logout</a>
+    </h4>
+            <br>
+            <textarea name="body"></textarea>
+        </div>
+    </div>
+    <div class="control-group">
+        <div class="controls">
+            <button type="submit" class="btn">Sent</button>
+        </div>
+    </div>
+  </form>
+  {{#each messages}}
+     {{datatime}} | {{username}} => {{title}}<br>
+    {{/each}}
+</template>

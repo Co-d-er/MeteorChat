@@ -1,0 +1,24 @@
+<template name="startPage">
+    {{#if currentUser}}
+        {{chat}}
+    {{else}}
+        {{> login}}
+    {{/if}}
+</template>
+
+
+<template name="login">
+    <form>
+        <label for="email">Email:</label>
+        <br>
+        <input type="email" name="loginEmail" id="email">
+        <br>
+        <label for="password">Password:</label>
+        <br>
+        <input type="password" name="loginPassword" id="password">
+        <br>
+        <br>
+        <input type="submit" value="Login">
+    </form> 
+    <button>Registration</button>
+</template>

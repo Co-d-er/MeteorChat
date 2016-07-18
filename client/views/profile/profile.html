@@ -1,0 +1,30 @@
+<template name="profile">
+    <form>
+        <label for="email">Email:</label>
+        <br>
+        <input type="email" name="registerEmail" id="email" value="{{user.email}}">
+        <br>
+        <label for="oldPassword">Old password:</label>
+        <br>
+        <input type="password" name="oldPassword" id="oldPassword">
+        <br>
+        <label for="newPassword">New password:</label>
+        <br>
+        <input type="password" name="newPassword" id="newPassword">
+        <br>
+        <label for="userName">User name:</label>
+        <br>
+        <input type="text" name="userName" id="userName" value="{{user.username}}">
+        <br>
+        <label for="location">Location:</label>
+        <br>
+        <select id="location">
+            {{#each locations}}
+            <option>{{city}}</option>
+            {{/each}}
+        </select>
+        <br>
+        <br>
+        <input type="submit" value="Change">
+    </form>
+</template>
